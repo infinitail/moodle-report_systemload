@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="report/systemload/db" VERSION="20181005" COMMENT="XMLDB file for Moodle report/systemload"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="report_sysload_loadaverage" COMMENT="">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="time" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="load1" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="load5" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="load15" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="Primary key"/>
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="time" UNIQUE="true" FIELDS="time"/>
+      </INDEXES>
+    </TABLE>
+    <TABLE NAME="report_sysload_restime" COMMENT="">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="time" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="responsetime" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="Primary key"/>
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="time" UNIQUE="true" FIELDS="time"/>
+      </INDEXES>
+    </TABLE>
+    <TABLE NAME="report_sysload_diskspace" COMMENT="">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="time" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="disktotal" TYPE="float" LENGTH="16" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="diskfree" TYPE="float" LENGTH="16" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="diskused" TYPE="float" LENGTH="16" NOTNULL="true" SEQUENCE="false"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="Primary key"/>
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="time" UNIQUE="true" FIELDS="time"/>
+      </INDEXES>
+    </TABLE>
+    <TABLE NAME="report_sysload_loginuser" COMMENT="">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="time" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="login5" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="loginsess" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="Primary key"/>
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="time" UNIQUE="true" FIELDS="time"/>
+      </INDEXES>
+    </TABLE>
+  </TABLES>
+</XMLDB>
