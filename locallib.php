@@ -338,4 +338,9 @@ class locallib
     {
         return floor($value / 1024 / 1024 / 1024 * 100) / 100;
     }
+
+    public function format_divideby100($value)
+    {
+        return $value / 100;
+    }
 }
